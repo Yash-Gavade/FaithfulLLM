@@ -1,0 +1,5 @@
+python -m compileall src
+python -m src.combine_results --model qwen_2_5_3b --output outputs\scores\qwen_2_5_3b_all_results.csv
+python -m src.create_annotation_sheet --input outputs\scores\qwen_2_5_3b_all_results.csv --output evaluation\qwen_2_5_3b_manual_annotations.csv
+code outputs\scores\qwen_2_5_3b_all_results.csv
+code evaluation\qwen_2_5_3b_manual_annotations.csv

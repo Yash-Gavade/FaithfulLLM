@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Representative qualitative examples from the reviewed manual-analysis sample. Excerpts are shortened for readability.}
+\label{tab:qualitative_examples}
+\begin{tabular}{llllllp{2.7cm}}
+\toprule
+\textbf{Model} &
+\textbf{Dataset} &
+\textbf{Case} &
+\textbf{Gold} &
+\textbf{Prediction} &
+\textbf{Explanation excerpt} &
+\textbf{Primary failure} \\
+\midrule
+DeepSeek-R1 Distill 1.5B & CommonsenseQA & Strong correct explanation & E. tiredness & E & \parbox[t]{4.4cm}{Tiredness is likely because running after a ball would require exerting energy, leading to a sense of fatigue.} & none \\
+Llama 3.2 3B & GSM8K & Answer–explanation mismatch & 720 & 960 & \parbox[t]{4.4cm}{Greta first puts 50\% of her paycheck into her retirement account, which is 0.5 * \$2400 = \$1200. Then, she uses 20\% of her paycheck for her car payment, which is 0.2 * \$2400 = \$480…} & answer\_explanation\_mismatch \\
+Qwen 2.5 3B & CommonsenseQA & Unsupported justification & D. outside & C. windowsill & \parbox[t]{4.4cm}{Ivy plants often require a lot of sunlight, which they can get from the warm south or west-facing windowsills in homes. Additionally, windowsills provide a stable surface for the…} & unsupported\_justification \\
+Llama 3.2 3B & StrategyQA & Factual hallucination & no & B & \parbox[t]{4.4cm}{A modern central processing unit (CPU) circuit chip is typically quite large and bulky, often measuring several inches in size. A house key, on the other hand, is a small, thin ob…} & factual\_hallucination \\
+DeepSeek-R1 Distill 1.5B & GSM8K & Logical or arithmetic error & 525 & 580 calories deficit per day & \parbox[t]{4.4cm}{Andy needs to burn 105,000 calories over 181 days, which averages to approximately 580 calories deficit per day.} & logical\_error \\
+\bottomrule
+\end{tabular}
+\end{table*}

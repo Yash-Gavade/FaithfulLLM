@@ -1,0 +1,89 @@
+project:
+  name: FaithfulLLM
+  seed: 42
+
+data:
+  samples_per_dataset: 100
+  output_csv: datasets/processed/benchmark_samples.csv
+  output_jsonl: datasets/processed/benchmark_samples.jsonl
+
+datasets:
+  gsm8k:
+    enabled: true
+    path: openai/gsm8k
+    config: main
+    split: test
+    task_type: mathematical_reasoning
+
+  commonsense_qa:
+    enabled: true
+    path: tau/commonsense_qa
+    config: null
+    split: validation
+    task_type: commonsense_reasoning
+
+  strategyqa:
+    enabled: true
+    path: ChilleD/StrategyQA
+    config: null
+    split: train
+    task_type: multi_hop_reasoning
+
+prompt:
+  version: v1
+  explanation_instruction: >
+    Give the final answer first. Then provide a concise explanation that
+    justifies that answer. Do not add unrelated information.
+
+generation:
+  max_new_tokens: 256
+  do_sample: false
+  temperature: 0.0
+  top_p: 1.0
+  seed: 42
+
+
+models:
+  qwen_test:
+    model_id: Qwen/Qwen2.5-0.5B-Instruct
+    display_name: Qwen 2.5 0.5B Instruct
+    enabled: true
+
+  qwen_2_5_3b:
+    model_id: Qwen/Qwen2.5-3B-Instruct
+    display_name: Qwen 2.5 3B Instruct
+    enabled: true
+    load_in_4bit: true
+    bnb_4bit_quant_type: nf4
+    bnb_4bit_use_double_quant: true
+    bnb_4bit_compute_dtype: float16
+    trust_remote_code: false
+  
+  llama_3_2_3b:
+    model_id: meta-llama/Llama-3.2-3B-Instruct
+    display_name: Llama 3.2 3B Instruct
+    enabled: true
+    load_in_4bit: true
+    bnb_4bit_quant_type: nf4
+    bnb_4bit_use_double_quant: true
+    bnb_4bit_compute_dtype: float16
+    trust_remote_code: false
+
+  deepseek_r1_qwen_1_5b:
+    model_id: deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+    display_name: DeepSeek R1 Distill Qwen 1.5B
+    enabled: true
+    load_in_4bit: true
+    bnb_4bit_quant_type: nf4
+    bnb_4bit_use_double_quant: true
+    bnb_4bit_compute_dtype: float16
+    trust_remote_code: false
+    max_new_tokens: 768
+
+inference:
+  input_file: datasets/processed/benchmark_samples.jsonl
+  output_file: outputs/generations/{model_key}_outputs.jsonl
+  limit: 5
+  device: auto
+  torch_dtype: auto
+  max_new_tokens: 256

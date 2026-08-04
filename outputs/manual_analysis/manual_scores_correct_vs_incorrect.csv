@@ -1,0 +1,9 @@
+,,faithfulness_score,faithfulness_score,faithfulness_score,logical_consistency_score,logical_consistency_score,logical_consistency_score,completeness_score,completeness_score,completeness_score
+,,mean,std,count,mean,std,count,mean,std,count
+model_key,is_correct,,,,,,,,,
+deepseek_r1_qwen_1_5b,False,1.2,0.862,15,1.533,0.834,15,1.867,0.516,15
+deepseek_r1_qwen_1_5b,True,2.533,0.99,15,2.6,0.91,15,2.2,0.775,15
+llama_3_2_3b,False,0.733,0.594,15,1.667,0.9,15,2.0,0.655,15
+llama_3_2_3b,True,2.667,0.816,15,2.733,0.594,15,2.333,0.488,15
+qwen_2_5_3b,False,0.733,0.704,15,1.6,1.056,15,2.267,0.594,15
+qwen_2_5_3b,True,2.733,0.704,15,2.667,0.9,15,2.333,0.488,15
