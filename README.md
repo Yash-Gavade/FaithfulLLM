@@ -81,7 +81,9 @@ The final answer was requested before the explanation to support consistent extr
 
 ## Experimental Pipeline
 
-![Experimental pipeline](figures/experimental_pipeline.png)
+
+<img width="646" height="827" alt="image" src="https://github.com/user-attachments/assets/e04e6ec0-2b93-4149-9b7e-aea5ebd18321" />
+
 
 The pipeline consists of:
 
