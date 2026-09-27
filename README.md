@@ -83,7 +83,6 @@ The final answer was requested before the explanation to support consistent extr
 
 <img width="590" height="810" alt="image" src="https://github.com/user-attachments/assets/06fe7db8-082a-4690-a1fa-3c1e1b35ba28" />
 
-<img width="646" height="827" alt="image" src="https://github.com/user-attachments/assets/e04e6ec0-2b93-4149-9b7e-aea5ebd18321" />
 
 
 The pipeline consists of:
