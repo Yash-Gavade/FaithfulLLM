@@ -506,29 +506,9 @@ The repository contains the implementation, experiment artifacts, evaluation out
 
 ---
 
-## Citation
-
-A formal citation will be added after publication or archival release of the paper.
-
-For now, please cite the repository as:
-
-```bibtex
-@misc{gavade2026faithfulllm,
-  author       = {Gavade, Yash Sakharam},
-  title        = {FaithfulLLM: An Empirical Evaluation of Explanation-Support
-                  Faithfulness in Open-Weight Large Language Models},
-  year         = {2026},
-  howpublished = {\url{https://github.com/Yash-Gavade/FaithfulLLM}},
-  note         = {GitHub repository}
-}
-```
-
----
-
 ## Author
 
-**Yash Sakharam Gavade**  
-Computational Linguistics and Digital Humanities Department
+**Yash Gavade**  
 Universität Trier, Germany
 
 ---
